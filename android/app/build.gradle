@@ -1,0 +1,47 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services'  // Firebase plugin
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.cosmic_numeriics"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.cosmic_numeriics"
+        minSdk = 23 // You can use 21 if you encounter compatibility issues with Firebase SDKs
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation 'com.google.firebase:firebase-auth:22.0.0'  // Firebase Authentication SDK
+    implementation 'com.google.firebase:firebase-firestore:24.3.0'  // Firestore SDK (if used)
+    implementation 'com.google.firebase:firebase-storage:20.2.0'  // Firebase Storage SDK (if used)
+}
+
+apply plugin: 'com.google.gms.google-services'  // Apply Google services plugin

@@ -1,0 +1,2 @@
+/Users/arpan/Documents/Personal Project/cosmic_numeriics/android/app/.cxx/Debug/5a37a6r5/x86_64/CMakeFiles/edit_cache.dir
+/Users/arpan/Documents/Personal Project/cosmic_numeriics/android/app/.cxx/Debug/5a37a6r5/x86_64/CMakeFiles/rebuild_cache.dir
